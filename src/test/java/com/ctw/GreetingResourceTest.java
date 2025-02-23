@@ -14,7 +14,7 @@ class GreetingResourceTest {
                 .when().get("/hello")
                 .then()
                 .statusCode(200)
-                .body(is("Hello World, Hi from Quarkus REST"));
+                .body(is("Hello World, Hi from Quarkus."));
     }
 
     @Test
@@ -23,7 +23,7 @@ class GreetingResourceTest {
                 .when().get("/hello?name=John")
                 .then()
                 .statusCode(200)
-                .body(is("Hello John, Hi from Quarkus REST"));
+                .body(is("Hello John, Hi from Quarkus."));
     }
 
 }

@@ -13,6 +13,6 @@ public class GreetingResource {
     @Produces(MediaType.TEXT_PLAIN)
     public String hello(@RestQuery String name) {
         name = name == null ? "World" : name;
-        return "Hello " + name + ", Hi from Quarkus REST";
+        return "Hello " + name + ", Hi from Quarkus.";
     }
 }

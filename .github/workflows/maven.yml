@@ -18,5 +18,9 @@ jobs:
       - uses: talesb/academy/.github/actions/docker_build@main
         with:
           path_dockerfile: src/main/docker/Dockerfile.jvm
-          image_name: academy
+          image_name: ${{ vars.DOCKERHUB_USERNAME }}/academy
 
+      - uses: talesb/academy/.github/actions/docker_pushd@main
+        with:
+          DOCKERHUB_USERNAME: ${{ vars.DOCKERHUB_USERNAME }}
+          DOCKERHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

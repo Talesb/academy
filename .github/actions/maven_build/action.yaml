@@ -3,8 +3,6 @@ description: 'Build a Maven project with Quarkus and Java 21'
 
 runs:
   using: 'composite'
-
-
   steps:
 
     - name: Set up JDK 21
